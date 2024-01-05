@@ -22,7 +22,7 @@ const uploadOnCloudinary = async (localPath) => {
         });
 
         // console.log('File Upload Cloudinary -> ',result.url);
-
+        fs.unlinkSync(localPath);
         return result;
 
     }catch(error){
